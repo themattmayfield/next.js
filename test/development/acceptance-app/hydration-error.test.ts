@@ -71,7 +71,7 @@ describe('Error overlay for hydration errors in App router', () => {
       ])
     )
     const { session, browser } = sandbox
-    await session.waitForAndOpenRuntimeError()
+    await session.openRedbox()
 
     await session.assertHasRedbox()
     expect(await getRedboxTotalErrorCount(browser)).toBe(1)
@@ -153,7 +153,7 @@ describe('Error overlay for hydration errors in App router', () => {
       ])
     )
     const { session, browser } = sandbox
-    await session.waitForAndOpenRuntimeError()
+    await session.openRedbox()
 
     await session.assertHasRedbox()
     expect(await getRedboxTotalErrorCount(browser)).toBe(1)
@@ -203,7 +203,7 @@ describe('Error overlay for hydration errors in App router', () => {
       ])
     )
     const { session, browser } = sandbox
-    await session.waitForAndOpenRuntimeError()
+    await session.openRedbox()
 
     await session.assertHasRedbox()
     expect(await getRedboxTotalErrorCount(browser)).toBe(1)
@@ -239,7 +239,7 @@ describe('Error overlay for hydration errors in App router', () => {
       ])
     )
     const { session, browser } = sandbox
-    await session.waitForAndOpenRuntimeError()
+    await session.openRedbox()
 
     await session.assertHasRedbox()
     expect(await getRedboxTotalErrorCount(browser)).toBe(1)
@@ -288,7 +288,7 @@ describe('Error overlay for hydration errors in App router', () => {
       ])
     )
     const { session, browser } = sandbox
-    await session.waitForAndOpenRuntimeError()
+    await session.openRedbox()
 
     await session.assertHasRedbox()
     expect(await getRedboxTotalErrorCount(browser)).toBe(1)
@@ -330,7 +330,7 @@ describe('Error overlay for hydration errors in App router', () => {
       ])
     )
     const { session, browser } = sandbox
-    await session.waitForAndOpenRuntimeError()
+    await session.openRedbox()
 
     await session.assertHasRedbox()
     expect(await getRedboxTotalErrorCount(browser)).toBe(1)
@@ -378,7 +378,7 @@ describe('Error overlay for hydration errors in App router', () => {
       ])
     )
     const { session, browser } = sandbox
-    await session.waitForAndOpenRuntimeError()
+    await session.openRedbox()
 
     await session.assertHasRedbox()
     expect(await getRedboxTotalErrorCount(browser)).toBe(2)
@@ -427,7 +427,7 @@ describe('Error overlay for hydration errors in App router', () => {
       ])
     )
     const { session, browser } = sandbox
-    await session.waitForAndOpenRuntimeError()
+    await session.openRedbox()
 
     await session.assertHasRedbox()
     await retry(async () => {
@@ -489,7 +489,7 @@ describe('Error overlay for hydration errors in App router', () => {
       ])
     )
     const { session } = sandbox
-    await session.waitForAndOpenRuntimeError()
+    await session.openRedbox()
 
     const pseudoHtml = await session.getRedboxComponentStack()
     if (isTurbopack) {
@@ -574,7 +574,7 @@ describe('Error overlay for hydration errors in App router', () => {
     )
 
     const { session, browser } = sandbox
-    await session.waitForAndOpenRuntimeError()
+    await session.openRedbox()
 
     await session.assertHasRedbox()
     expect(await getRedboxTotalErrorCount(browser)).toBe(2)
@@ -633,7 +633,7 @@ describe('Error overlay for hydration errors in App router', () => {
     )
 
     const { session, browser } = sandbox
-    await session.waitForAndOpenRuntimeError()
+    await session.openRedbox()
 
     await session.assertHasRedbox()
     expect(await getRedboxTotalErrorCount(browser)).toBe(2)
@@ -672,7 +672,7 @@ describe('Error overlay for hydration errors in App router', () => {
     )
 
     const { session, browser } = sandbox
-    await session.waitForAndOpenRuntimeError()
+    await session.openRedbox()
 
     await session.assertHasRedbox()
     expect(await getRedboxTotalErrorCount(browser)).toBe(2)
@@ -726,7 +726,7 @@ describe('Error overlay for hydration errors in App router', () => {
     )
 
     const { session, browser } = sandbox
-    await session.waitForAndOpenRuntimeError()
+    await session.openRedbox()
 
     await session.assertHasRedbox()
     expect(await getRedboxTotalErrorCount(browser)).toBe(2)
@@ -798,7 +798,7 @@ describe('Error overlay for hydration errors in App router', () => {
       ])
     )
     const { session, browser } = sandbox
-    await session.waitForAndOpenRuntimeError()
+    await session.openRedbox()
 
     await session.assertHasRedbox()
 
@@ -870,7 +870,7 @@ describe('Error overlay for hydration errors in App router', () => {
       ])
     )
     const { session, browser } = sandbox
-    await session.waitForAndOpenRuntimeError()
+    await session.openRedbox()
 
     await session.assertHasRedbox()
     expect(await getRedboxTotalErrorCount(browser)).toBe(1)

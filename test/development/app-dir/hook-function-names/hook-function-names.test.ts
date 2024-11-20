@@ -2,7 +2,7 @@ import { nextTestSetup } from 'e2e-utils'
 import {
   assertHasRedbox,
   getRedboxSource,
-  waitForAndOpenRuntimeError,
+  openRedbox,
 } from 'next-test-utils'
 
 describe('hook-function-names', () => {
@@ -15,7 +15,7 @@ describe('hook-function-names', () => {
 
     await browser.elementByCss('button').click()
 
-    await waitForAndOpenRuntimeError(browser)
+    await openRedbox(browser)
 
     if (isTurbopack) {
       expect(await getRedboxSource(browser)).toMatchInlineSnapshot(`
